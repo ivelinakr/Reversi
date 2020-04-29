@@ -33,7 +33,6 @@ public class Cell {
      *  Cell's column
      */
     private int column;
-
     /**
      *  Potential moves of the piece
      */
