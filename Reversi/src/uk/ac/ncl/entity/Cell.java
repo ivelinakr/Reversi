@@ -126,11 +126,11 @@ public class Cell {
                     && cells[d_row][d_col].getValue() == opponent) {
                 while (true){
                     d_row += dir[0];
-                    d_col += dir[0];
+                    d_col += dir[1];
                     temp_score += 1;
                     if (0 <= d_col &&  d_col < BOARD_SIZE && 0 <=  d_row
                             && cells[d_row][d_col].getValue() != CellStatus.EMPTY){
-                        if (cells[d_row][d_col].getValue() == opponent) {
+                        if (cells[d_row][d_col].getValue() != opponent) {
                             isLegal = true;
                             score += temp_score;
                             moves.add(new DirectedMove(cells[d_row][d_col], dir));
