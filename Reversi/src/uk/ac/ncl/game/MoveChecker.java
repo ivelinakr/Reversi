@@ -52,6 +52,7 @@ public class MoveChecker {
      */
     public void flipPieces(Cell cell, CellStatus colour) {
         cell.colourTemp(colour == OPPONENTS_CELL_STATUS ? OPPONENTS_COLOUR : PLAYERS_COLOUR, false);
+        cell.setValue(colour);
         for (DirectedMove move : cell.getMove().getMoves()) {
             int[] dir = move.getDirection();
             int d_row = cell.getRow();
